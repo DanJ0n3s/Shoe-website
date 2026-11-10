@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is an HTML5 page -->
+<html lang="en">
+<head>
+  <!-- Lets the page show special characters like the Naira sign -->
+  <meta charset="UTF-8">
+  <!-- Makes the page fit phone screens (responsive design) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The text shown on the browser tab -->
+  <title>Home | StepRight Shoes</title>
+  <!-- Connects the CSS file to this page -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER: logo and navigation menu (same on every page) -->
+  <header>
+    <div class="logo">Step<span>Right</span> Shoes</div>
+    <nav>
+      <ul><li><a href="index.html" class="active">Home</a></li><li><a href="men.html">Men</a></li><li><a href="women.html">Women</a></li><li><a href="sneakers.html">Sneakers</a></li><li><a href="order.html">Cart / Order</a></li></ul>
+    </nav>
+  </header>
+
+  <!-- HERO: big welcome area (Flexbox puts text and picture side by side) -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Walk in Comfort. Walk in Style.</h1>
+      <p>Quality shoes for men, women and sneaker lovers at prices you will enjoy.</p>
+      <a href="sneakers.html" class="btn">Shop Now</a>
+    </div>
+    <img src="images/sneak1.svg" alt="White sneaker">
+  </div>
+
+  <!-- CATEGORIES: three boxes that link to the product pages -->
+  <section>
+    <h2 class="title">Shop by Category</h2>
+    <div class="categories">
+      <a href="men.html" class="cat">Men's Shoes</a>
+      <a href="women.html" class="cat">Women's Shoes</a>
+      <a href="sneakers.html" class="cat">Sneakers</a>
+    </div>
+  </section>
+
+  <!-- PRODUCT GALLERY: CSS Grid arranges the cards in 3 columns -->
+  <section>
+    <h2 class="title">Featured Shoes</h2>
+    <div class="gallery">
+      <div class="card">
+        <span class="badge">NEW</span>
+        <img src="images/men1.svg" alt="Urban Runner shoe">
+        <h3>Urban Runner</h3>
+        <p class="price">&#8358;25,000</p>
+        <a href="product.html" class="btn">View Shoe</a>
+      </div>
+      <div class="card">
+        <span class="badge">NEW</span>
+        <img src="images/women1.svg" alt="Rose Step shoe">
+        <h3>Rose Step</h3>
+        <p class="price">&#8358;22,000</p>
+        <a href="product.html" class="btn">View Shoe</a>
+      </div>
+      <div class="card">
+        
+        <img src="images/sneak1.svg" alt="Court White shoe">
+        <h3>Court White</h3>
+        <p class="price">&#8358;30,000</p>
+        <a href="product.html" class="btn">View Shoe</a>
+      </div>
+      <div class="card">
+        
+        <img src="images/men2.svg" alt="Street Black shoe">
+        <h3>Street Black</h3>
+        <p class="price">&#8358;28,000</p>
+        <a href="product.html" class="btn">View Shoe</a>
+      </div>
+      <div class="card">
+        
+        <img src="images/women2.svg" alt="Cloud Walker shoe">
+        <h3>Cloud Walker</h3>
+        <p class="price">&#8358;26,500</p>
+        <a href="product.html" class="btn">View Shoe</a>
+      </div>
+      <div class="card">
+        
+        <img src="images/sneak2.svg" alt="Neon Sprint shoe">
+        <h3>Neon Sprint</h3>
+        <p class="price">&#8358;35,000</p>
+        <a href="product.html" class="btn">View Shoe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why">
+    <h2 class="title">Why Shop With Us?</h2>
+    <div class="why-boxes">
+      <div><h3>Quality Materials</h3><p>Every pair is made to last.</p></div>
+      <div><h3>Fast Delivery</h3><p>We deliver within Lagos in 2 days.</p></div>
+      <div><h3>Easy Returns</h3><p>Wrong size? Exchange within 7 days.</p></div>
+    </div>
+  </section>
+
+  <!-- FOOTER: contact details (same on every page) -->
+  <footer>
+    <p>StepRight Shoes | 12 Market Road, Ikorodu, Lagos | Phone: 0800 000 0000</p>
+    <p>&copy; 2026 StepRight Shoes. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

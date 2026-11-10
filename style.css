@@ -1,0 +1,271 @@
+/* ===== RESET: removes the browser's default spacing ===== */
+* {
+  margin: 0;                 /* no outside space */
+  padding: 0;                /* no inside space */
+  box-sizing: border-box;    /* padding and border stay inside the width (box model) */
+}
+
+/* ===== PAGE BASICS ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;  /* the text style */
+  background-color: #eef3fb;                  /* light blue page background */
+  color: #222;                                /* dark grey text */
+  line-height: 1.6;                           /* space between lines */
+  animation: fadeIn 1s;                       /* page fades in smoothly when opened */
+}
+@keyframes fadeIn {
+  from { opacity: 0; }   /* start invisible */
+  to   { opacity: 1; }   /* end fully visible */
+}
+
+/* ===== HEADER AND NAVIGATION (Flexbox) ===== */
+header {
+  background-color: #1b2a49;      /* dark blue bar */
+  color: white;                   /* white text */
+  display: flex;                  /* put logo and menu in one row */
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center;            /* line them up vertically */
+  padding: 15px 40px;             /* space inside the bar */
+  position: sticky;               /* bar stays at the top while scrolling */
+  top: 0;                         /* stick to the very top */
+  z-index: 10;                    /* stay above other things */
+}
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+.logo span {
+  color: #f4a300;                 /* orange "Right" in the logo */
+}
+nav ul {
+  list-style: none;               /* remove bullet points */
+  display: flex;                  /* menu links in a row */
+  gap: 12px;                      /* space between links */
+}
+nav a {
+  color: white;
+  text-decoration: none;          /* remove underline */
+  padding: 8px 14px;
+  border-radius: 5px;             /* rounded corners */
+  transition: background-color 0.3s;  /* smooth colour change on hover */
+}
+nav a:hover, nav a.active {
+  background-color: #f4a300;      /* orange when hovered or on current page */
+  color: #1b2a49;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background-color: #cfe0fa;      /* light blue background colour */
+  display: flex;                  /* text and picture side by side */
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px 40px;
+}
+.hero-text { max-width: 450px; }
+.hero h1 {
+  font-size: 40px;
+  color: #1b2a49;
+  margin-bottom: 15px;
+}
+.hero p { margin-bottom: 20px; font-size: 18px; }
+.hero img {
+  width: 380px;                   /* picture size */
+  max-width: 100%;                /* never bigger than the screen */
+  border-radius: 12px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  background-color: #e63946;      /* red button */
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;                /* hand icon on hover */
+  transition: transform 0.3s, background-color 0.3s;  /* smooth hover effect */
+}
+.btn:hover {
+  background-color: #b71c28;      /* darker red */
+  transform: scale(1.08);         /* button grows slightly */
+}
+.btn.grey { background-color: #5c6b82; }
+
+/* ===== SECTIONS AND TITLES ===== */
+section { padding: 40px; }
+.title {
+  text-align: center;
+  color: #1b2a49;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+.intro { text-align: center; margin-bottom: 25px; }
+
+/* ===== CATEGORY BOXES (Grid) ===== */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+  gap: 20px;
+}
+.cat {
+  background-color: #1b2a49;
+  color: white;
+  text-align: center;
+  padding: 40px 10px;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.cat:hover {
+  background-color: #f4a300;
+  color: #1b2a49;
+  transform: translateY(-5px);    /* lifts up a little */
+}
+
+/* ===== PRODUCT GALLERY (Grid) ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 shoes per row */
+  gap: 25px;
+}
+.card {
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);  /* soft shadow */
+  position: relative;             /* lets the NEW badge be placed inside the card */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);    /* card floats up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+.card img {
+  width: 100%;                    /* picture fills the card */
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.card h3 { margin-bottom: 5px; color: #1b2a49; }
+.price {
+  color: #e63946;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.badge {
+  position: absolute;             /* placed exactly where we want in the card */
+  top: 10px;
+  left: 10px;
+  background-color: #f4a300;
+  color: #1b2a49;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ===== WHY SHOP WITH US ===== */
+.why { background-color: #dbe7f7; }
+.why-boxes {
+  display: flex;                  /* three boxes in a row */
+  gap: 20px;
+}
+.why-boxes div {
+  flex: 1;                        /* each box takes equal width */
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  border-top: 4px solid #f4a300;  /* orange line on top */
+}
+.why-boxes h3 { color: #1b2a49; margin-bottom: 6px; }
+
+/* ===== PRODUCT DETAIL PAGE ===== */
+.detail {
+  display: flex;                  /* picture left, details right */
+  gap: 40px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.detail img { width: 45%; border-radius: 8px; }
+.info { flex: 1; }
+.info h3 { font-size: 28px; color: #1b2a49; }
+.info p, .info ul { margin-bottom: 15px; }
+.info ul { margin-left: 20px; }
+
+/* ===== CART TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;      /* joins the cell borders */
+  background-color: white;
+}
+th, td {
+  border: 1px solid #b8c4d8;
+  padding: 12px;
+  text-align: left;
+}
+th { background-color: #1b2a49; color: white; }
+.total { font-weight: bold; background-color: #ffe9b0; }
+
+/* ===== ORDER FORM ===== */
+form {
+  max-width: 600px;               /* form is not too wide */
+  margin: 0 auto;                 /* centre the form */
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #9aa8c0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #f4a300;          /* orange border when typing */
+  background-color: #fffbee;
+}
+.radios label { font-weight: normal; display: inline-block; margin-right: 20px; }
+.radios input { width: auto; }
+form .btn { margin-top: 20px; }
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #1b2a49;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE DESIGN: changes layout on tablets and phones ===== */
+@media (max-width: 800px) {
+  header { flex-direction: column; gap: 10px; padding: 15px 20px; }  /* logo above menu */
+  nav ul { flex-wrap: wrap; justify-content: center; }
+  .hero { flex-direction: column; text-align: center; }              /* stack text and picture */
+  .gallery { grid-template-columns: repeat(2, 1fr); }                /* 2 shoes per row */
+  .categories { grid-template-columns: 1fr; }                        /* 1 category per row */
+  .why-boxes { flex-direction: column; }
+  .detail { flex-direction: column; }
+  .detail img { width: 100%; }
+  section { padding: 30px 20px; }
+}
+@media (max-width: 500px) {
+  .gallery { grid-template-columns: 1fr; }                           /* 1 shoe per row on small phones */
+  .hero h1 { font-size: 30px; }
+}

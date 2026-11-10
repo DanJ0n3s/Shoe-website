@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is an HTML5 page -->
+<html lang="en">
+<head>
+  <!-- Lets the page show special characters like the Naira sign -->
+  <meta charset="UTF-8">
+  <!-- Makes the page fit phone screens (responsive design) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The text shown on the browser tab -->
+  <title>Cart and Order | StepRight Shoes</title>
+  <!-- Connects the CSS file to this page -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER: logo and navigation menu (same on every page) -->
+  <header>
+    <div class="logo">Step<span>Right</span> Shoes</div>
+    <nav>
+      <ul><li><a href="index.html">Home</a></li><li><a href="men.html">Men</a></li><li><a href="women.html">Women</a></li><li><a href="sneakers.html">Sneakers</a></li><li><a href="order.html" class="active">Cart / Order</a></li></ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2 class="title">Your Cart</h2>
+    <!-- A table to show the items in the cart -->
+    <table>
+      <tr><th>Shoe</th><th>Size</th><th>Quantity</th><th>Price</th></tr>
+      <tr><td>Urban Runner</td><td>42</td><td>1</td><td>&#8358;25,000</td></tr>
+      <tr><td>Rose Step</td><td>38</td><td>1</td><td>&#8358;22,000</td></tr>
+      <tr class="total"><td colspan="3">Total</td><td>&#8358;47,000</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 class="title">Place Your Order</h2>
+    <!-- Order form: the customer fills in details here -->
+    <form action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+
+      <label for="address">Delivery Address</label>
+      <textarea id="address" name="address" rows="3" placeholder="Enter your delivery address" required></textarea>
+
+      <label for="shoe">Choose Shoe</label>
+      <select id="shoe" name="shoe"><option>Urban Runner</option><option>Street Black</option><option>Trail Master</option><option>Rose Step</option><option>Cloud Walker</option><option>Lilac Glide</option><option>Court White</option><option>Neon Sprint</option><option>Sky Flex</option></select>
+
+      <label for="size">Size</label>
+      <input type="number" id="size" name="size" min="36" max="46" value="42">
+
+      <label>Payment Method</label>
+      <div class="radios">
+        <label><input type="radio" name="pay" value="delivery" checked> Pay on Delivery</label>
+        <label><input type="radio" name="pay" value="transfer"> Bank Transfer</label>
+      </div>
+
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+  </section>
+
+  <!-- FOOTER: contact details (same on every page) -->
+  <footer>
+    <p>StepRight Shoes | 12 Market Road, Ikorodu, Lagos | Phone: 0800 000 0000</p>
+    <p>&copy; 2026 StepRight Shoes. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
